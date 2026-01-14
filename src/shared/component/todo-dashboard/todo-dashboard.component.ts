@@ -30,7 +30,6 @@ Ondelete(id: any) {
   edittodo!:Istd
   Editedobj(Todo:Istd){
     this.edittodo=Todo
-    console.log(Todo)
     
   } 
 

@@ -19,10 +19,14 @@ export class TodoListComponent implements OnInit  {
 
 
 Ondelete(id : string) {
+  // console.log("hii");
+  
   this.deleteID.emit(id);
  }
 
 OnEdit(obj:Istd){
+  // console.log("hii");
+  
 this.EmitEditObj.emit(obj)
 }
 

@@ -15,9 +15,11 @@
       />
  
 
-    <button
-      *ngIf="!isEditMode"        mat-raised-button class=" btn btn-block mt-2" color="primary">Add Todo</button>
-    <button (click)="OnUpdate()" *ngIf="isEditMode" mat-raised-button class="btn-block mt-2" color="warn">Update Todo</button>
-    </div>
+  <button
+      *ngIf="!isinEditmode" mat-raised-button class=" btn btn-block mt-2" color="primary">Add Mob</button>
+       <button
+      *ngIf="isinEditmode" (click)="OnUpdate()" mat-raised-button class=" btn btn-block mt-2" color="warn">Update Mob </button>
+
+      </div>
   </form>
 </div>
