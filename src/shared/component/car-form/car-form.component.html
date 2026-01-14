@@ -1,0 +1,23 @@
+<div class="container">
+    <form #CarForm="ngForm" (ngSubmit)="OnSubmit()">
+
+        <div class="form-group mb-3">
+            <label for="brand">Car brand</label>
+            <input type="text" class="form-control" name="brand" ngModel #name="ngModel" required>
+            <label for="model">Model</label>
+            <input type="text" class="form-control" name="model" ngModel #name="ngModel" required>
+            <label for="year">year</label>
+            <input type="text" class="form-control" name="year" ngModel #name="ngModel" required>
+            <label for="price">price</label>
+            <input type="text" class="form-control" name="price" ngModel #name="ngModel" required>
+       
+    </div>
+
+        <button  
+        *ngIf="!isInEditmode" mat-raised-button class=" btn btn-block mt-2" color="primary">Add car</button>
+ <button
+      *ngIf="isInEditmode" (click)="OnUpdate()" mat-raised-button class=" btn btn-block mt-2" color="warn">Update Mob </button>
+
+
+    </form>
+</div>

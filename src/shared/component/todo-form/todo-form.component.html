@@ -1,0 +1,23 @@
+
+<div class="container">
+
+  <form #todoForm="ngForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group mb-3">
+      <label for="name">Todo Name</label>
+      <input
+        type="text"
+        class="form-control"
+        name="name"
+        ngModel
+        #name="ngModel"
+        required
+      />
+ 
+
+    <button
+      *ngIf="!isEditMode"        mat-raised-button class=" btn btn-block mt-2" color="primary">Add Todo</button>
+    <button (click)="OnUpdate()" *ngIf="isEditMode" mat-raised-button class="btn-block mt-2" color="warn">Update Todo</button>
+    </div>
+  </form>
+</div>

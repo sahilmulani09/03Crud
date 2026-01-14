@@ -1,0 +1,24 @@
+  
+  
+<div class="container">
+ <form #MobileForm="ngForm" (ngSubmit)="OnAdd()">
+         
+  <div class="form-group mb-3">
+      <label for="mobileName">Mobile Name</label>
+      <input
+        type="text"
+        class="form-control"
+        name="mobileName"
+        ngModel
+        #mobileName="ngModel"
+        required
+       />
+  <button
+      *ngIf="!isinEditmode" mat-raised-button class=" btn btn-block mt-2" color="primary">Add Mob</button>
+       <button
+      *ngIf="isinEditmode" (click)="OnUpdate()" mat-raised-button class=" btn btn-block mt-2" color="warn">Update Mob </button>
+
+       </div>
+ </form>
+
+</div>

@@ -1,0 +1,40 @@
+<div class="table-responsive mt-3">
+  <table class="table table-bordered table-hover table-striped text-center align-middle">
+    <thead class="table-dark">
+      <tr *ngIf="CarArray.length > 0 ; else NoList!!!">
+        <th>ID</th>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Price</th>
+        <th>EDIT</th>
+        <th>REMOVE</th>
+
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let D of CarArray ">
+        <td>{{ D.id }}</td>
+        <td class="fw-bold">{{ D.brand }}</td>
+        <td>{{ D.model }}</td>
+        <td>{{ D.year }}</td>
+        <td class="text-success fw-bold">
+          {{ D.price | currency:'INR' }}
+        </td>
+
+
+        <td> <button (click)="OnEdit(D)" mat-raised-button color="primary" class="mr-2">
+            Edit</button></td>
+
+        <td> <button  (click)="OnDelete(D.id)" mat-raised-button color="warn">
+            Remove</button></td>
+
+
+      </tr>
+    </tbody>
+  </table>
+<ng-template #NoList>
+    <p class="alert alert-info mt-4 text-center">No list!!!</p>
+</ng-template>
+</div>

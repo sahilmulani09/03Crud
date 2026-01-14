@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="row">
+        
+         <div class="col-md-6 mt-5">
+            <app-todo-form (sendstudent)="Addstudent($event)"
+             [getEditTodod]="edittodo" 
+             (emitUpdate)="getUpdateTodo($event)"></app-todo-form>
+        </div>
+        <div class="col-md-6">
+            <app-todo-list [Tstd]="StdArr"  
+            (deletestudent)="Ondelete($event)"
+            (EmitEditObj)="Editedobj($event)"></app-todo-list>
+          
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+

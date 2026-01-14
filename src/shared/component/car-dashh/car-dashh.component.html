@@ -1,0 +1,27 @@
+ <div class=" container-fluid">
+<div class="row">
+
+
+    <div class="col-md-6 mt-5">
+     <app-car-form (emitedCar)="AddCar($event)" 
+       [EditedObj]="EDITEDstore"
+              (EmitUpdatedList)="Updatedobj($event)"
+
+
+     ></app-car-form>
+     
+
+
+    </div>
+
+
+    <div class="col-md-6">
+        <app-car-list [CarArray]="CarArr"
+       (EditedObj)="editedobj($event)"
+         (EmitedDeleteID)="DeleteId($event)"
+       >
+
+        </app-car-list>
+    </div>
+</div>
+</div>
